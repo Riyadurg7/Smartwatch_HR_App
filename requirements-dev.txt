@@ -1,0 +1,4 @@
+# Extra packages for rebuilding the dataset, retraining the model and validation
+-r requirements.txt
+pyarrow
+tabulate

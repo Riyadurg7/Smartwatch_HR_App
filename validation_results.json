@@ -1,0 +1,552 @@
+{
+  "participants": [
+    {
+      "user": "2022484408",
+      "days": 41.3,
+      "quality": 69.3,
+      "coverage": 28.7,
+      "resting": 62.3,
+      "sleep_hr": NaN,
+      "sleep_src": "obs",
+      "sed_hr": 69.0,
+      "active_hr": 111.7,
+      "pct_active": 8.4,
+      "rest_episodes": 0,
+      "anomalies": "150/2988"
+    },
+    {
+      "user": "2026352035",
+      "days": 37.8,
+      "quality": 55.4,
+      "coverage": 0.7,
+      "resting": 67.5,
+      "sleep_hr": 66.1,
+      "sleep_src": "obs",
+      "sed_hr": 87.2,
+      "active_hr": NaN,
+      "pct_active": 0.0,
+      "rest_episodes": 0,
+      "anomalies": "4/62"
+    },
+    {
+      "user": "2347167796",
+      "days": 31.3,
+      "quality": 95.1,
+      "coverage": 80.2,
+      "resting": 66.2,
+      "sleep_hr": 65.9,
+      "sleep_src": "obs",
+      "sed_hr": 71.8,
+      "active_hr": 105.4,
+      "pct_active": 2.8,
+      "rest_episodes": 0,
+      "anomalies": "209/4165"
+    },
+    {
+      "user": "4020332650",
+      "days": 41.5,
+      "quality": 73.2,
+      "coverage": 36.3,
+      "resting": 73.7,
+      "sleep_hr": 64.7,
+      "sleep_src": "obs",
+      "sed_hr": 85.3,
+      "active_hr": 106.5,
+      "pct_active": 2.1,
+      "rest_episodes": 1,
+      "anomalies": "114/2281"
+    },
+    {
+      "user": "4388161847",
+      "days": 29.6,
+      "quality": 95.0,
+      "coverage": 79.9,
+      "resting": 56.5,
+      "sleep_hr": 55.1,
+      "sleep_src": "obs",
+      "sed_hr": 60.7,
+      "active_hr": 97.0,
+      "pct_active": 3.5,
+      "rest_episodes": 1,
+      "anomalies": "192/3834"
+    },
+    {
+      "user": "4558609924",
+      "days": 41.7,
+      "quality": 72.5,
+      "coverage": 35.0,
+      "resting": 64.7,
+      "sleep_hr": 66.4,
+      "sleep_src": "obs",
+      "sed_hr": 74.7,
+      "active_hr": 104.7,
+      "pct_active": 2.3,
+      "rest_episodes": 0,
+      "anomalies": "192/3824"
+    },
+    {
+      "user": "5553957443",
+      "days": 41.4,
+      "quality": 94.2,
+      "coverage": 78.5,
+      "resting": 60.1,
+      "sleep_hr": 59.9,
+      "sleep_src": "obs",
+      "sed_hr": 63.4,
+      "active_hr": 97.0,
+      "pct_active": 2.9,
+      "rest_episodes": 0,
+      "anomalies": "279/5570"
+    },
+    {
+      "user": "5577150313",
+      "days": 40.5,
+      "quality": 91.9,
+      "coverage": 73.8,
+      "resting": 56.0,
+      "sleep_hr": 51.6,
+      "sleep_src": "obs",
+      "sed_hr": 61.0,
+      "active_hr": 108.5,
+      "pct_active": 9.7,
+      "rest_episodes": 0,
+      "anomalies": "248/4960"
+    },
+    {
+      "user": "6117666160",
+      "days": 38.5,
+      "quality": 81.3,
+      "coverage": 52.7,
+      "resting": 74.8,
+      "sleep_hr": 69.6,
+      "sleep_src": "obs",
+      "sed_hr": 82.6,
+      "active_hr": 113.2,
+      "pct_active": 0.4,
+      "rest_episodes": 0,
+      "anomalies": "168/3347"
+    },
+    {
+      "user": "6391747486",
+      "days": 3.1,
+      "quality": 61.4,
+      "coverage": 12.8,
+      "resting": 77.5,
+      "sleep_hr": 76.2,
+      "sleep_src": "assumed",
+      "sed_hr": 82.7,
+      "active_hr": 108.1,
+      "pct_active": 0.9,
+      "rest_episodes": 0,
+      "anomalies": "5/93"
+    },
+    {
+      "user": "6775888955",
+      "days": 36.1,
+      "quality": 63.9,
+      "coverage": 17.7,
+      "resting": 75.2,
+      "sleep_hr": 76.5,
+      "sleep_src": "obs",
+      "sed_hr": 90.3,
+      "active_hr": 115.8,
+      "pct_active": 12.2,
+      "rest_episodes": 2,
+      "anomalies": "60/1182"
+    },
+    {
+      "user": "6962181067",
+      "days": 43.5,
+      "quality": 96.2,
+      "coverage": 82.4,
+      "resting": 67.0,
+      "sleep_hr": 64.3,
+      "sleep_src": "obs",
+      "sed_hr": 71.9,
+      "active_hr": 111.7,
+      "pct_active": 3.6,
+      "rest_episodes": 0,
+      "anomalies": "301/6013"
+    },
+    {
+      "user": "7007744171",
+      "days": 35.6,
+      "quality": 79.7,
+      "coverage": 49.3,
+      "resting": 72.8,
+      "sleep_hr": 67.4,
+      "sleep_src": "obs",
+      "sed_hr": 81.0,
+      "active_hr": 114.6,
+      "pct_active": 6.4,
+      "rest_episodes": 0,
+      "anomalies": "153/3049"
+    },
+    {
+      "user": "8792009665",
+      "days": 33.5,
+      "quality": 83.2,
+      "coverage": 56.5,
+      "resting": 66.0,
+      "sleep_hr": 63.9,
+      "sleep_src": "obs",
+      "sed_hr": 72.8,
+      "active_hr": 108.2,
+      "pct_active": 0.7,
+      "rest_episodes": 1,
+      "anomalies": "159/3172"
+    },
+    {
+      "user": "8877689391",
+      "days": 41.3,
+      "quality": 74.8,
+      "coverage": 39.7,
+      "resting": 60.2,
+      "sleep_hr": 75.4,
+      "sleep_src": "assumed",
+      "sed_hr": 65.8,
+      "active_hr": 133.8,
+      "pct_active": 9.0,
+      "rest_episodes": 0,
+      "anomalies": "190/3791"
+    }
+  ],
+  "activity_model": {
+    "n_minutes": 471487,
+    "n_participants": 15,
+    "class_counts": {
+      "sedentary": 344811,
+      "light": 105062,
+      "active": 21614
+    },
+    "accuracy": 0.813,
+    "balanced_accuracy": 0.78,
+    "precision_macro": 0.71,
+    "recall_macro": 0.78,
+    "f1_macro": 0.738,
+    "roc_auc_macro_ovr": 0.927,
+    "roc_auc_active_vs_rest": 0.981,
+    "per_class": {
+      "sedentary": {
+        "precision": 0.939,
+        "recall": 0.837,
+        "f1": 0.885,
+        "support": 344811
+      },
+      "light": {
+        "precision": 0.569,
+        "recall": 0.746,
+        "f1": 0.646,
+        "support": 105062
+      },
+      "active": {
+        "precision": 0.621,
+        "recall": 0.757,
+        "f1": 0.682,
+        "support": 21614
+      }
+    },
+    "confusion_matrix": [
+      [
+        288646,
+        54179,
+        1986
+      ],
+      [
+        18663,
+        78394,
+        8005
+      ],
+      [
+        78,
+        5183,
+        16353
+      ]
+    ],
+    "baseline_always_sedentary_accuracy": 0.731,
+    "baseline_hr_threshold": {
+      "accuracy": 0.757,
+      "balanced_accuracy": 0.742,
+      "f1_macro": 0.665
+    },
+    "cv": "GroupKFold(5) by participant - test participants never seen in training"
+  },
+  "hr_only_path": {
+    "table": [
+      {
+        "user": "2022484408",
+        "resting_observed": 62.3,
+        "resting_estimated": 62.5,
+        "diff": 0.2,
+        "active_pct_observed": 8.4,
+        "active_pct_estimated": 6.8
+      },
+      {
+        "user": "2026352035",
+        "resting_observed": 67.5,
+        "resting_estimated": 70.2,
+        "diff": 2.7,
+        "active_pct_observed": 0.0,
+        "active_pct_estimated": 8.7
+      },
+      {
+        "user": "2347167796",
+        "resting_observed": 66.2,
+        "resting_estimated": 65.0,
+        "diff": -1.2,
+        "active_pct_observed": 2.8,
+        "active_pct_estimated": 3.9
+      },
+      {
+        "user": "4020332650",
+        "resting_observed": 73.7,
+        "resting_estimated": 69.6,
+        "diff": -4.1,
+        "active_pct_observed": 2.1,
+        "active_pct_estimated": 7.4
+      },
+      {
+        "user": "4388161847",
+        "resting_observed": 56.5,
+        "resting_estimated": 56.2,
+        "diff": -0.3,
+        "active_pct_observed": 3.5,
+        "active_pct_estimated": 4.1
+      },
+      {
+        "user": "4558609924",
+        "resting_observed": 64.7,
+        "resting_estimated": 63.3,
+        "diff": -1.4,
+        "active_pct_observed": 2.3,
+        "active_pct_estimated": 1.6
+      },
+      {
+        "user": "5553957443",
+        "resting_observed": 60.1,
+        "resting_estimated": 60.3,
+        "diff": 0.2,
+        "active_pct_observed": 2.9,
+        "active_pct_estimated": 2.0
+      },
+      {
+        "user": "5577150313",
+        "resting_observed": 56.0,
+        "resting_estimated": 55.3,
+        "diff": -0.7,
+        "active_pct_observed": 9.7,
+        "active_pct_estimated": 13.8
+      },
+      {
+        "user": "6117666160",
+        "resting_observed": 74.8,
+        "resting_estimated": 72.4,
+        "diff": -2.4,
+        "active_pct_observed": 0.4,
+        "active_pct_estimated": 5.9
+      },
+      {
+        "user": "6391747486",
+        "resting_observed": 77.5,
+        "resting_estimated": 75.9,
+        "diff": -1.6,
+        "active_pct_observed": 0.9,
+        "active_pct_estimated": 1.2
+      },
+      {
+        "user": "6775888955",
+        "resting_observed": 75.2,
+        "resting_estimated": 72.9,
+        "diff": -2.3,
+        "active_pct_observed": 12.2,
+        "active_pct_estimated": 10.6
+      },
+      {
+        "user": "6962181067",
+        "resting_observed": 67.0,
+        "resting_estimated": 66.5,
+        "diff": -0.5,
+        "active_pct_observed": 3.6,
+        "active_pct_estimated": 4.8
+      },
+      {
+        "user": "7007744171",
+        "resting_observed": 72.8,
+        "resting_estimated": 72.5,
+        "diff": -0.3,
+        "active_pct_observed": 6.4,
+        "active_pct_estimated": 7.6
+      },
+      {
+        "user": "8792009665",
+        "resting_observed": 66.0,
+        "resting_estimated": 64.7,
+        "diff": -1.3,
+        "active_pct_observed": 0.7,
+        "active_pct_estimated": 4.5
+      },
+      {
+        "user": "8877689391",
+        "resting_observed": 60.2,
+        "resting_estimated": 60.6,
+        "diff": 0.4,
+        "active_pct_observed": 9.0,
+        "active_pct_estimated": 7.9
+      }
+    ],
+    "resting_mae": 1.31
+  },
+  "anomaly_benchmark": [
+    {
+      "method": "isolation_forest",
+      "features": "plain",
+      "precision": 0.132,
+      "recall": 0.807,
+      "f1": 0.223,
+      "roc_auc": 0.967,
+      "pr_auc": 0.376
+    },
+    {
+      "method": "isolation_forest",
+      "features": "context",
+      "precision": 0.126,
+      "recall": 0.76,
+      "f1": 0.212,
+      "roc_auc": 0.955,
+      "pr_auc": 0.266
+    },
+    {
+      "method": "lof",
+      "features": "plain",
+      "precision": 0.137,
+      "recall": 0.881,
+      "f1": 0.233,
+      "roc_auc": 0.976,
+      "pr_auc": 0.192
+    },
+    {
+      "method": "lof",
+      "features": "context",
+      "precision": 0.132,
+      "recall": 0.814,
+      "f1": 0.223,
+      "roc_auc": 0.958,
+      "pr_auc": 0.291
+    }
+  ],
+  "flag_composition": {
+    "table": [
+      {
+        "user": "2022484408",
+        "plain_flags_during_movement": 68.7,
+        "context_flags_during_movement": 48.7,
+        "plain_flags_while_still": 2.7,
+        "context_flags_while_still": 10.7
+      },
+      {
+        "user": "2026352035",
+        "plain_flags_during_movement": 0.0,
+        "context_flags_during_movement": 0.0,
+        "plain_flags_while_still": 25.0,
+        "context_flags_while_still": 25.0
+      },
+      {
+        "user": "2347167796",
+        "plain_flags_during_movement": 49.3,
+        "context_flags_during_movement": 28.2,
+        "plain_flags_while_still": 3.8,
+        "context_flags_while_still": 10.5
+      },
+      {
+        "user": "4020332650",
+        "plain_flags_during_movement": 25.4,
+        "context_flags_during_movement": 18.4,
+        "plain_flags_while_still": 15.8,
+        "context_flags_while_still": 28.9
+      },
+      {
+        "user": "4388161847",
+        "plain_flags_during_movement": 48.4,
+        "context_flags_during_movement": 31.2,
+        "plain_flags_while_still": 4.7,
+        "context_flags_while_still": 14.6
+      },
+      {
+        "user": "4558609924",
+        "plain_flags_during_movement": 35.9,
+        "context_flags_during_movement": 16.7,
+        "plain_flags_while_still": 18.8,
+        "context_flags_while_still": 31.2
+      },
+      {
+        "user": "5553957443",
+        "plain_flags_during_movement": 50.5,
+        "context_flags_during_movement": 47.0,
+        "plain_flags_while_still": 3.2,
+        "context_flags_while_still": 8.6
+      },
+      {
+        "user": "5577150313",
+        "plain_flags_during_movement": 62.9,
+        "context_flags_during_movement": 44.8,
+        "plain_flags_while_still": 2.4,
+        "context_flags_while_still": 8.9
+      },
+      {
+        "user": "6117666160",
+        "plain_flags_during_movement": 16.9,
+        "context_flags_during_movement": 9.5,
+        "plain_flags_while_still": 7.8,
+        "context_flags_while_still": 24.4
+      },
+      {
+        "user": "6391747486",
+        "plain_flags_during_movement": 20.0,
+        "context_flags_during_movement": 0.0,
+        "plain_flags_while_still": 20.0,
+        "context_flags_while_still": 20.0
+      },
+      {
+        "user": "6775888955",
+        "plain_flags_during_movement": 33.3,
+        "context_flags_during_movement": 13.3,
+        "plain_flags_while_still": 8.3,
+        "context_flags_while_still": 41.7
+      },
+      {
+        "user": "6962181067",
+        "plain_flags_during_movement": 53.8,
+        "context_flags_during_movement": 29.6,
+        "plain_flags_while_still": 3.7,
+        "context_flags_while_still": 17.9
+      },
+      {
+        "user": "7007744171",
+        "plain_flags_during_movement": 33.3,
+        "context_flags_during_movement": 16.3,
+        "plain_flags_while_still": 19.0,
+        "context_flags_while_still": 26.1
+      },
+      {
+        "user": "8792009665",
+        "plain_flags_during_movement": 17.6,
+        "context_flags_during_movement": 2.5,
+        "plain_flags_while_still": 10.7,
+        "context_flags_while_still": 31.4
+      },
+      {
+        "user": "8877689391",
+        "plain_flags_during_movement": 80.0,
+        "context_flags_during_movement": 73.7,
+        "plain_flags_while_still": 1.6,
+        "context_flags_while_still": 3.7
+      }
+    ],
+    "mean": {
+      "plain_flags_during_movement": 39.7,
+      "context_flags_during_movement": 25.3,
+      "plain_flags_while_still": 9.8,
+      "context_flags_while_still": 20.2
+    }
+  }
+}

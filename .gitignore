@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.streamlit/secrets.toml
+*.pdf
+venv/
+.venv/
+.DS_Store
+# full datasets are large - rebuild with build_dataset.py
+data/
+*.arff
+validation_log.txt

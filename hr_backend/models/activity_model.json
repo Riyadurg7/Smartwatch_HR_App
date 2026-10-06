@@ -1,0 +1,91 @@
+{
+  "task": "per-minute activity level from heart rate",
+  "classes": [
+    "sedentary",
+    "light",
+    "active"
+  ],
+  "features": [
+    "hr_mean",
+    "hr_std",
+    "hr_range",
+    "rel",
+    "ratio",
+    "z",
+    "c5_mean",
+    "c15_mean",
+    "c5_std",
+    "c15_max",
+    "c15_min",
+    "rel_c5",
+    "rel_c15",
+    "d1",
+    "slope5",
+    "hour_sin",
+    "hour_cos"
+  ],
+  "algorithm": "HistGradientBoostingClassifier(class_weight='balanced')",
+  "trained_on": "FitBit Fitness Tracker Data (both export periods), 15 participants, 471,487 labelled minutes",
+  "sklearn_version": "1.9.1",
+  "trained_at": "2026-10-06T18:38:56",
+  "evaluation": {
+    "n_minutes": 471487,
+    "n_participants": 15,
+    "class_counts": {
+      "sedentary": 344811,
+      "light": 105062,
+      "active": 21614
+    },
+    "accuracy": 0.813,
+    "balanced_accuracy": 0.78,
+    "precision_macro": 0.71,
+    "recall_macro": 0.78,
+    "f1_macro": 0.738,
+    "roc_auc_macro_ovr": 0.927,
+    "roc_auc_active_vs_rest": 0.981,
+    "per_class": {
+      "sedentary": {
+        "precision": 0.939,
+        "recall": 0.837,
+        "f1": 0.885,
+        "support": 344811
+      },
+      "light": {
+        "precision": 0.569,
+        "recall": 0.746,
+        "f1": 0.646,
+        "support": 105062
+      },
+      "active": {
+        "precision": 0.621,
+        "recall": 0.757,
+        "f1": 0.682,
+        "support": 21614
+      }
+    },
+    "confusion_matrix": [
+      [
+        288646,
+        54179,
+        1986
+      ],
+      [
+        18663,
+        78394,
+        8005
+      ],
+      [
+        78,
+        5183,
+        16353
+      ]
+    ],
+    "baseline_always_sedentary_accuracy": 0.731,
+    "baseline_hr_threshold": {
+      "accuracy": 0.757,
+      "balanced_accuracy": 0.742,
+      "f1_macro": 0.665
+    },
+    "cv": "GroupKFold(5) by participant - test participants never seen in training"
+  }
+}
