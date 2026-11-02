@@ -146,8 +146,8 @@ def analyze(
             ctx=ctx, model_meta=(model.meta if model is not None else None),
         )
 
-        m_meta = {}
         am = get_activity_model()
+        m_meta = {} if am is not None else {"unavailable": ActivityModel.load_problem or "not loaded"}
         if am is not None:
             ev = am.meta.get("evaluation", {})
             m_meta = {

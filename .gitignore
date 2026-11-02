@@ -1,12 +1,23 @@
+# Python
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-.streamlit/secrets.toml
-*.pdf
 venv/
 .venv/
+
+# Streamlit secrets (never commit)
+.streamlit/secrets.toml
+
+# OS files
 .DS_Store
-# full datasets are large - rebuild with build_dataset.py
+Thumbs.db
+
+# Large datasets - rebuild with build_dataset.py from the Kaggle download
 data/
 *.arff
 validation_log.txt
+
+# Generated reports
+*.pdf
+
+# NOTE: sample_data/ and hr_backend/models/ must be committed - the app needs them.

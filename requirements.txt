@@ -1,11 +1,17 @@
-# Exact versions tested together (Python 3.13). scikit-learn is pinned exactly
-# because the bundled activity model file was saved with this version.
-streamlit==1.65.0
-pandas==3.0.5
-numpy==2.5.3
+# Runtime dependencies. Installs on Python 3.11-3.14 (Linux and Windows).
+# Tested with clean installs on 3.11, 3.12, 3.13 and 3.14 - see DEPLOYMENT.md.
+#
+# scikit-learn is pinned EXACTLY because the bundled activity model
+# (hr_backend/models/activity_model.joblib) was saved with this version.
+# With any other version the app still runs, but skips activity estimation
+# for heart-rate-only uploads (retrain with train_activity_model.py to fix).
 scikit-learn==1.9.1
-joblib==1.6.0
-scipy==1.18.1
-plotly==7.1.0
-matplotlib==3.11.2
-reportlab==5.0.1
+
+streamlit>=1.52,<2
+pandas>=2.2.2,<4
+numpy>=2.0,<3
+scipy>=1.13,<2
+joblib>=1.3
+plotly>=5.20,<8
+matplotlib>=3.9,<4
+reportlab>=4.0,<6

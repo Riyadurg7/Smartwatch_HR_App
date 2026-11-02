@@ -11,7 +11,7 @@ Tracker Data** (Kaggle).
 ## Quick start
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt     # Python 3.11-3.14 (3.12 recommended)
 streamlit run app.py
 ```
 
@@ -85,7 +85,8 @@ F2="archive/mturkfitbit_export_4.12.16-5.12.16/Fitabase Data 4.12.16-5.12.16"
 python build_dataset.py "$F1" "$F2"        # merge both periods -> data/
 python train_activity_model.py             # evaluate + retrain the model
 python validate_report.py "$F1" "$F2"      # regenerate VALIDATION numbers
-python test_pipeline.py                    # self-test (needs only sample_data/)
+python test_pipeline.py                    # backend self-test (needs only sample_data/)
+python test_app.py                         # clicks through the app headlessly
 ```
 
 ## Project layout

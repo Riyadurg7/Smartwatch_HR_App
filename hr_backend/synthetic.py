@@ -86,9 +86,19 @@ def generate(
         keep = rng.random(n) > dropout_frac
         df = df[keep].reset_index(drop=True)
 
-    # Fitbit stores Time as "M/D/YYYY h:mm:ss AM/PM"
-    df["Time"] = df["Time"].dt.strftime("%-m/%-d/%Y %-I:%M:%S %p")
+    # Fitbit stores Time as "M/D/YYYY h:mm:ss AM/PM" (no leading zeros).
+    # Built by hand because the "%-m" strftime flag only exists on Linux/macOS.
+    df["Time"] = _fitbit_time(df["Time"])
     return df
+
+
+def _fitbit_time(ts: pd.Series) -> pd.Series:
+    """Format timestamps like Fitbit exports, e.g. 4/12/2016 7:05:00 AM, on any OS."""
+    h = ts.dt.hour
+    h12 = (h % 12).where(h % 12 != 0, 12)
+    ampm = pd.Series(np.where(h < 12, "AM", "PM"), index=ts.index)
+    return (ts.dt.month.astype(str) + "/" + ts.dt.day.astype(str) + "/" + ts.dt.year.astype(str)
+            + " " + h12.astype(str) + ":" + ts.dt.strftime("%M:%S") + " " + ampm)
 
 
 if __name__ == "__main__":

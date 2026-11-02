@@ -126,6 +126,12 @@ def interpret(
     # --- sleep & activity context ---
     activity_text = ""
     if ctx is not None:
+        if ctx.intensity_source == "none":
+            alerts.append(Alert(
+                "info", "activity_unavailable",
+                "No activity information was available, so resting heart rate is estimated "
+                "from daytime readings and unusual patterns are judged on heart rate alone."
+            ))
         if ctx.intensity_source == "estimated":
             acc = (model_meta or {}).get("evaluation", {}).get("accuracy")
             acc_txt = f" (about {acc*100:.0f}% accurate on people it was not trained on)" if acc else ""

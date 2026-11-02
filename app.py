@@ -39,6 +39,11 @@ st.caption(
 # --------------------------------------------------------------------------- #
 # data helpers
 # --------------------------------------------------------------------------- #
+SAMPLE_FILES = ["sample_heartrate.csv", "sample_minuteIntensitiesNarrow.csv",
+                "sample_minuteStepsNarrow.csv", "sample_minuteSleep.csv"]
+SAMPLE_OK = all((SAMPLE_DIR / f).exists() for f in SAMPLE_FILES)
+
+
 @st.cache_data(show_spinner=False)
 def load_sample(with_context: bool):
     hr = pd.read_csv(SAMPLE_DIR / "sample_heartrate.csv")
@@ -76,7 +81,12 @@ with st.sidebar:
     ], help="Samples are one real, anonymised participant from the FitBit Fitness Tracker Data. "
             "'Heart rate only' shows how the trained model estimates activity when no activity file exists.")
 
-    if source.startswith("Sample: 7"):
+    if source.startswith("Sample") and not SAMPLE_OK:
+        # safety net: the sample_data/ folder was not deployed with the app
+        st.warning("Sample files are missing from this installation (sample_data/ folder), "
+                   "so generated synthetic data is used instead.")
+        hr_df = generate(days=4)
+    elif source.startswith("Sample: 7"):
         hr_df, ctx_frames = load_sample(True)
     elif source.startswith("Sample: heart"):
         hr_df, ctx_frames = load_sample(False)
@@ -177,7 +187,8 @@ with tabs[0]:
 # ============================ ACTIVITY & SLEEP ============================= #
 with tabs[1]:
     if not c.get("available"):
-        st.info("No activity context available for this recording.")
+        st.info("No activity information for this recording. Upload Fitbit activity files "
+                "(minuteIntensitiesNarrow / minuteStepsNarrow / minuteSleep) to see this tab.")
     else:
         src = {"observed": "from your activity file", "estimated": "estimated by the trained model"}
         st.caption(f"Activity: {src.get(c['intensity_source'], c['intensity_source'])}  |  "
@@ -292,8 +303,11 @@ with tabs[3]:
 with tabs[4]:
     st.subheader("Supervised activity model")
     am = result.activity_model
-    if not am:
-        st.warning("Activity model file not found - heart-rate-only uploads will skip activity estimation.")
+    if not am or am.get("unavailable"):
+        why = (am or {}).get("unavailable", "not loaded")
+        st.warning(f"The activity model is not available here ({why}). The app still works, but "
+                   "heart-rate-only uploads skip activity estimation. Upload Fitbit activity files, "
+                   "or retrain with `python train_activity_model.py` in this environment.")
     else:
         ev = am["evaluation"]
         st.write(

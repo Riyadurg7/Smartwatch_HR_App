@@ -179,18 +179,38 @@ class ActivityModel:
     def __init__(self, model, meta: dict):
         self.model, self.meta = model, meta
 
+    # why the last load() returned None (shown in the app)
+    load_problem: Optional[str] = None
+
     @classmethod
     def load(cls) -> Optional["ActivityModel"]:
-        """Load the bundled model; returns None (app degrades gracefully) on failure."""
+        """
+        Load the bundled model. Returns None - and the app keeps working without
+        activity estimation - when the file is missing, unreadable, or was saved
+        with a different scikit-learn minor version (pickled models are not
+        guaranteed to behave the same across versions, so we refuse rather than
+        risk silently wrong predictions).
+        """
+        cls.load_problem = None
         try:
             import joblib
+            import sklearn
             import warnings
+            if not MODEL_PATH.exists():
+                cls.load_problem = "model file not found"
+                return None
+            meta = json.loads(META_PATH.read_text()) if META_PATH.exists() else {}
+            saved = meta.get("sklearn_version", "")
+            if saved and saved.split(".")[:2] != sklearn.__version__.split(".")[:2]:
+                cls.load_problem = (f"model was saved with scikit-learn {saved} but "
+                                    f"{sklearn.__version__} is installed")
+                return None
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore")
                 model = joblib.load(MODEL_PATH)
-            meta = json.loads(META_PATH.read_text()) if META_PATH.exists() else {}
             return cls(model, meta)
-        except Exception:
+        except Exception as e:  # noqa: BLE001
+            cls.load_problem = f"could not load model ({type(e).__name__})"
             return None
 
     def predict(self, minute_hr: pd.DataFrame) -> pd.DataFrame:
